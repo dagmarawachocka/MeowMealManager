@@ -18,6 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
       - name: Install and build
         working-directory: ./meow-meal-manager
         run: npm install && npm run build && cp dist/meow-meal-manager/browser/index.html dist/meow-meal-manager/browser/404.html
