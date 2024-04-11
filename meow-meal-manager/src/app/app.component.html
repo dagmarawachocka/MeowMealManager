@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <h1>Meow Meal Manager</h1>
+  <h3>Manage your cat's meals in few seconds</h3>
+  <div class="user-info-container">
+    <div class="warm-brown-container">
+      <div>
+        <h5>Enter start time</h5>
+      </div>
+      <div class="input-container">
+        <input type="number" min="0" max="23" placeholder="00" #hour/>
+        <span>:</span>
+        <input type="number" min="0" max="59" placeholder="00" #min/>
+      </div>
+    </div>
+
+    <div class="warm-brown-container">
+      <div>
+        <h5>Set timer</h5>
+      </div>
+      <div class="input-container">
+        <input
+          type="number" min="0" step="1" placeholder="00" #breakTimeHour/>
+        <span class="colon">:</span>
+        <input type="number" min="0" max="59" placeholder="00" #breakTimeMin/>
+      </div>
+    </div>
+  </div>
+
+  <div class="centred-container">
+    <button class="counting-button" (click)="countTimeWithDate()">
+      Get hours
+    </button>
+  </div>
+
+  <div class="centred-container">
+    <div class="warm-brown-container">
+      <h5>Hours of meals</h5>
+      <div class="time-container">
+        <div class="column">
+          @for (hour of arrayOfHours; track hour) {
+            <span class="time-item-container">{{ hour | number: '2.0-0'}}</span>
+          }
+        </div>
+        @if (arrayOfHours.length === 5) {
+          <div class="column">
+            @for (_ of [1,2,3,4,5]; track _) {
+              <span>:</span>
+            }
+          </div>
+        } @else {
+          <p>Enter start time and timer</p>
+        }
+        <div class="column">
+          @for (min of arrayOfMin; track min) {
+            <span class="time-item-container">{{ min | number: '2.0-0' }}</span>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

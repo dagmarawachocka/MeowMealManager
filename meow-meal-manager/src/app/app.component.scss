@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi+Fun:wght@400..700&display=swap');
+
+$light-green: #E8EFCF;
+$dark-green: #7C9769;
+$even-darker-green: #526545;
+$warm-brown: #DBA979;
+$beige: #FFEFDA;
+$shadow-color: rgba(0, 0, 0, 0.25);
+$shadow: 0 4px 4px $shadow-color;
+
+
+
+.wrapper {
+  h1 {
+    margin: 60px auto 30px;
+    text-align: center;
+    font: 80px "Reem Kufi Fun", sans-serif;
+    color: $dark-green;
+    font-weight: 600;
+    line-height: 1.25;
+    text-shadow: -2px -2px 2px $even-darker-green;
+  }
+
+  h3 {
+    font: italic 25px "PT Sans", sans-serif;
+    color: $dark-green;
+    text-align: center;
+    margin: 20px auto 50px;
+    width: 70%;
+  }
+
+  .user-info-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    .input-container {
+      margin-top: 10px;
+
+      input {
+        width: 50px;
+        border-radius: 5px;
+        background: $beige;
+        border: none;
+        text-align: center;
+        font: 20px "Reem Kufi Fun", sans-serif;
+        box-shadow: 2px 2px 4px $shadow-color;
+      }
+    }
+    @media (min-width: 480px) {
+      justify-content: center;
+    }
+  }
+
+
+
+  .warm-brown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 20px 10px;
+    margin: 2px;
+    text-align: center;
+    background: $warm-brown;
+    border: 5px solid $beige;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    h5 {
+      text-shadow: $shadow;
+      color: $beige;
+      font-family: "PT Sans", sans-serif;
+      margin: 0 0 5px 0;
+      font-size: 20px;
+    }
+    span {
+      margin: 0 5px;
+      color: black;
+      font-weight: 600;
+    }
+    .time-container {
+      display: flex;
+      .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span {
+          font: 20px "Reem Kufi Fun", sans-serif;
+          margin: 10px 2px 7px;
+          padding: 8px;
+          border-radius: 5px;
+        }
+        .time-item-container {
+          background: $beige;
+          box-shadow: $shadow;
+        }
+      }
+      p {
+        color: $beige;
+        margin: 10px;
+        font: 20px "PT Sans", sans-serif;
+      }
+    }
+    @media(min-width: 480px) {
+      width: 200px;
+      margin: 2px 20px;
+    }
+  }
+
+
+  .centred-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+
+
+
+    .counting-button {
+      margin: 20px;
+      background: $dark-green;
+      width: 230px;
+      padding: 10px;
+      color: $light-green;
+      text-shadow: $shadow;
+      font: 20px "PT Sans", sans-serif;
+      font-weight: 600;
+      border-radius: 20px;
+      border: none;
+      box-shadow: inset 0 4px 4px rgba(232, 239, 207, 0.6);
+      cursor: pointer;
+
+      &:hover {
+        background: $even-darker-green;
+        box-shadow: $shadow;
+      }
+    }
+  }
+}
