@@ -1,5 +1,7 @@
 name: Github Pages Deploy
 run-name: ${{ github.actor }} started the process
+permissions:
+  contents: write
 
 on:
   push:
