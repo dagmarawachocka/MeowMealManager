@@ -26,7 +26,7 @@ jobs:
 
       - name: Install and build
         working-directory: ./meow-meal-manager
-        run: npm install && npm run build && cp dist/meow-meal-manager/browser/index.html dist/meow-meal-manager/browser/404.html
+        run: npm install && npm run build && cp dist/browser/index.html dist/browser/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
